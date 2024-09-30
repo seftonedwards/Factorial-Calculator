@@ -1,0 +1,31 @@
+/******************************************************************************
+File Name: Edwards_Sefton_FactorialCalculator.cpp                                                                                                                                                                                                                                                 */
+Author(s): S. Edwards                                                                                                                          
+Purpose of Program: This program computes the factorial of a user inputted value, n.
+Input Variables: A positive integer                                                                          
+Output Variables: Factorial of a positive integer
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int n;
+    int factorial = 1; 
+
+    cout << "Enter a non-negative integer: ";
+    cin >> n;
+
+    while (n < 0) {
+        cout << "Invalid input. Please enter a non-negative integer: ";
+        cin >> n;
+    }
+
+    for (int i = 1; i <= n; ++i) {
+        factorial *= i;
+    }
+
+    cout << n << "! = " << factorial << endl;
+
+    return 0;
+}
